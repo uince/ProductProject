@@ -1,0 +1,17 @@
+- name: Installation de git
+  hosts: machinesGestion
+  remote_user: administrateur
+  
+  tasks: 
+    - name: Installation de git2
+      apt: name=git update_cache=yes state=latest
+      become: yes
+
+- name: Installation de docker
+  hosts: machinesGestion
+  remote_user: administrateur
+  
+  tasks: 
+    - name: Installation de docker2
+      apt: name=docker.io update_cache=yes state=latest
+      become: yes
